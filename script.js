@@ -1,4 +1,1 @@
-function lol()
-{
-  reload();
-}
+alert("Ey you how r u ?");
