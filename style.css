@@ -1,15 +1,84 @@
-/* CSS BOI */
-.header{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  font-style: oblique;
-  font-size: 40px;
-  font-family: monospace;
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body{
-  background-color: red;
+  background:linear-gradient(45deg,rgb(0, 0, 0),rgb(116, 114, 114),rgb(0, 0, 0)) fixed;
+  transition: 2s;
+}
+header{
+  
+}
+
+#main-section{
+  border: 2px solid black;
+  margin-top: 20px;
+  padding: 10px;
+
+  overflow: hidden;
+  width: 100%;
+
+}
+#main-section p{
+  font-size: 20px;
+  font-family: monospace;
+  word-spacing: -2px;
+}
+.main-image{
+
+  filter: grayscale(100%);
+}
+
+nav ul{
+  border-radius: 2px;
+  box-shadow: 1em 1em 10px 1px rgb(61, 59, 59);
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(223, 217, 217);
+  font-size: 25px;
+  background-color: black;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header ul li{
+  background: transparent;
+  margin: 0 20px;
+  list-style: none;
+  font-family: monospace;
+  transition: 0.4s;
+}
+header ul li:hover{
+  color:white;
+  filter:brightness(200%);
+  box-shadow: 10px 10px 200px 25px white;
+}
+#root{
+  transition: 0.5s;
+}
+#root:hover{
+  color: red;
+}
+nav li a{
+  text-decoration: none;
+  color: inherit;
+}
 
 
+#page-header{
+  font-family:monospace;
+  font-size: 50px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.4s;
+}
+#page-header:hover{
+  color: white;
 
 }
