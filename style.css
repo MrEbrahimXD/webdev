@@ -5,6 +5,8 @@
     #ff6b08, #cf23cf, #eedd44);
     --animation-color1: var(--main-color);
     --animation-color2: linear-gradient(#e66465, #9198e5);
+    --article-black-color: ;
+    --article-red-color: #7C0A02 ;
 }
 *,*::after,*::before{
     box-sizing: border-box;
@@ -12,6 +14,7 @@
     scroll-behavior: smooth;
     margin: 0;
     scroll-padding: 10rem;
+    border: 1px solid black;
 }
 
 html{
@@ -21,7 +24,7 @@ header{
     width: 100%;
     height: 100vh;
     background: var(--background-color);
-    
+
 }
 nav{
     padding: 0;
@@ -78,15 +81,77 @@ h1{
     animation: 3s animation ease-in-out infinite;
 }
 
-#first-section{
+article{
+    padding: 2rem;
     width: 100%;
     height: 100vh;
+    text-overflow:ellipsis;
+    background: var(--article-red-color);
+}
+
+article h3{
+    text-align: center;
+    font: 4rem 'Courier New';
+    color: white;
+}
+article img{
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+
+article div h3{
+    color: black;
+    font-size: 1rem;
+}
+.project-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 20px auto;
+    height: 30rem;
+
+}
+
+.project-container div{
+    width: 25%;
+}
+#first-section h2,h3{
+    color: white;
+    font-family: monospace;
+    border-bottom: 1px solid white;
+
+}
+
+#first-section{
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--background-color);
+}
+#first-section , #second-section{
+    width: 100%;
+    height: 100vh;
+
+}
+#first-section div{
+    
+    padding: 20px;
+    height: 50%;
+    background: var(--article-red-color);
+    border-radius: 10px;
 }
 #about{
     font-size: 6rem;
 }
 #first-section p:first-of-type{
     font-size: 2rem;
+    
 }
 
 .main-image{
@@ -103,14 +168,40 @@ nav a:hover{
     animation: 1s hover ease-in-out infinite;
 }
 nav li:hover{
-    
+
     transform: scale(1.2);
 }
 
 
+.about-div{
+    width: 100%;
+    padding: 1rem;
+    
+    
+}
+#first-section img{
+    width: 12rem;
+    margin-top: 0.5rem;
+    filter: grayscale(100);
+}
 
+.about-div-second{
+    width: 100%;
 
+}
+#first-section p::before{
+    content: "root@legion:~# " !important;
+    opacity: 0.35 !important;
+    animation: 2000ms legion ease-in-out infinite !important;
+}
 
+@keyframes legion{
+    0%{ color : inherit}
+    25%{ color: red; opacity: 0.75;}
+    50%{ color: inherit}
+    100%{ color: red; opacity: 0.75;}
+
+}
 
 
 
@@ -150,4 +241,16 @@ nav li:hover{
     0%{ color: white}
     50%{ color: #ff6666}
     100%{ color: white}
+}
+
+@media (max-width: 30rem) {
+    .project-container div{
+        width: 50%;
+    }
+}
+
+@media (max-width: 20rem) {
+    .project-container div{
+        width: 100%;
+    }
 }
