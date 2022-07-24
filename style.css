@@ -1,17 +1,28 @@
-*{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
+*,*::after,*::before
+{
+    box-sizing: border-box;
 }
-html{
-    
+
+html
+{
+    font-family: 'Poppins','sans-serif';
+    color: black;
 }
-:root{
+
+:root
+{
     --color-main: linear-gradient(to right, #304352, #d7d2cc);
     --main-btn-color: rgb(30, 105, 245);
 
 }
-
-header{
+#nav-button
+{
+    display: none;
+}
+header
+{
     width: 100%;
     height:4rem;
     position: fixed;
@@ -20,20 +31,22 @@ header{
     left:  0;
     margin: auto;
     border-bottom: 0.1px solid #d7d2cc;
+    z-index: 1;
 }
 
-.nav-img img{
+.nav-img img
+{
     transform: scale(1.15);
 }
 
-ul{
+ul
+{
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
-html{
-    color: black;
-}
-nav{
+
+nav
+{
     width: 100%;
     height: 100%;
     display: flex;
@@ -41,59 +54,65 @@ nav{
     align-items: center;
     flex-wrap: wrap;
 }
-a{
-    font: 1rem Poppins, sans-serif;
+a
+{
+    font: 1rem 'Poppins', sans-serif;
     font-weight: 800;
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
     transition: 250ms;
 }
-li{
+li
+{
     list-style: none;
     
 }
-a:hover{
+a:hover
+{
     color: rgb(0, 183, 255);
 }
 
 /* ************** */
 
-main{
+main
+{
     width: 100%;
     height: auto;
 }
-.main-section{
+.main-section
+{
     width: 100%;
-    height: calc(100vh - 4rem );
+    height: 100%;
 }
-#portfolio{
+#portfolio
+{
     height: 50%;
     width: 95%;
     margin: 6rem auto;
-    margin-bottom: -30px;
     gap: 0.5rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-#portfolio h3{
-    font-family: Poppins, sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 2.3rem;
+#portfolio h3
+{
+    font: normal 100 2.3rem 'Poppins',sans-serif;
 }
-#portfolio img{
+#portfolio img
+{
     border-radius: 50%;
 }
 
-#portfolio p{
+#portfolio p
+{
     margin-top: -1rem;
-    font-family: Poppins,sans-serif;
+    font-family: sans-serif;
     filter: opacity(0.75);
 }
-#portfolio button{
+#portfolio button
+{
     font-family: sans-serif;
     font-weight: 900;
     padding: 6px;
@@ -108,15 +127,16 @@ main{
     transition: all
     250ms ;
 }
-#portfolio button:hover{
+#portfolio button:hover
+{
     color: var(--main-btn-color);
     background: white;
-    box-shadow: 0.2rem 0.2rem 1rem 0.2rem black;
+    box-shadow: 0.1rem 0.1rem 1rem 1px black;
 }
 
 
-
-#targets{
+#targets
+{
     margin-top: 3rem;
     width: 100%;
     height: auto;
@@ -126,13 +146,15 @@ main{
     justify-content: center;
     
 }
-#targets h3{
+#targets h3
+{
     text-align: center;
     font: 800 2.3rem sans-serif;
     margin-top: 15px;
     color:rgb(30, 105, 245);
 }
-#targets div{
+#targets div
+{
     border-radius: 6px;
     background: #f6f6f6;
     width: 300px;
@@ -144,35 +166,27 @@ main{
     
 }
 
-#targets img{
+#targets img
+{
     width: 7rem;
     
 }
-#targets p {
+#targets p 
+{
     margin-top: -2rem;
     font: 500 1rem sans-serif;
 }
 
-footer{
+footer
+{
     text-align: center;
     font: 500 1.2rem sans-serif;
     margin: auto 10px;
 }
 
-@media screen and (max-width: 25rem) {
-    .nav-items li{
-        display: none;
-    }
-    nav{
-        display: inline-block;
-    }
-    .nav-img{
-        margin: 0 auto;
-    }
-    
-}
 
-@media screen and (max-width: 30rem){
+@media screen and (max-width: 30rem)
+{
     header,.main-section{
         text-align: center;
     }
@@ -181,16 +195,21 @@ footer{
     }
 }
 
+@media screen and (max-width: 570px)
+{
 
-
-
-
-
-@keyframes botton{
-    from{
-
+    .nav-items{
+        display: none;
     }
-    to {
-
+    
+    nav{
+        justify-content: center;
     }
+    
 }
+
+/* Nav Button */
+
+
+
+/* End of the nav button */
