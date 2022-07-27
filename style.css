@@ -9,7 +9,21 @@ html
 {
     font-family: 'Poppins','sans-serif';
     color: black;
+    font-size: 18px;
+    z-index: 1;
+    transition: all 500ms ease-in-out;
+    
 }
+
+#canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+
 
 :root
 {
@@ -104,11 +118,12 @@ header
     height:4rem;
     position: fixed;
     top: 0;
-    background: white;
+    background-color: #fff;
     left:  0;
     margin: auto;
     border-bottom: 0.1px solid #d7d2cc;
     z-index: 1;
+
 }
 .nav-img{
     margin: 0;
@@ -118,6 +133,7 @@ header
 .nav-img img
 {
     transform: scale(1.15);
+    transition: opacity 500ms ease-in-out;
 }
 
 ul
@@ -258,6 +274,7 @@ main
 }
 #targets p 
 {
+    color: #00000086;
     margin-top: -2rem;
     font: 500 1rem sans-serif;
 }
