@@ -37,72 +37,22 @@ html
     
 }
 
-.app {
-    width: 60%;
-    height: max-content;
-    background-color: #3041521b;
-    margin-inline: auto;
-    border-radius: 10px;
-    display: flex;
-    overflow: hidden;
-    transition: background-color 500ms ease-in-out;
-}
-
-.app-img-div {
-    width: 25%;
-    height: max-content;
-    padding: 0.5rem;
-    display: inline-block;
-}
-.app-img {
-    width: 80px;
-    height: 100%;
-    border-radius: 10px;
-    display: inline;
-}
-.app-info-div{
-    width: 75%;
-    display: inline-block;
-}
-
-.app-title {
-    width: 100%;
-    height: 100%;
-    display: inline;
-}
-
-.app-link {
-    color: var(--main-btn-color);
-}
 :root
 {
     --color-main: linear-gradient(to right, #304352, #d7d2cc);
     --main-btn-color: rgb(30, 105, 245);
 
 }
-.warning {
-    width: 300px;
+.app {
+    width: 95%;
     height: max-content;
-    background: #000000;
-    color: white;
+    background-color: #d7d2cc4f;
+    margin: auto;
     border-radius: 10px;
-    margin: 1.5rem;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 0.5rem;
-}
+    padding: 1rem;
 
-.warning button {
-    height: 50px;
-    width: 100%;
-    color: #000;
-    font: 800 1rem sans-serif;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
 }
-
+.app h3{ font-size: 1.4rem}
 
 
 .nav-button
