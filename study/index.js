@@ -6,17 +6,17 @@ $(document).ready( function() {
   });
 });
 
-const important = document.querySelector('.important');
+// const important = document.querySelector('.important');
 
-const createInfo = (subject , description)  => {
-  const subject = document.createElement('div');
-  subject.className = "subject";
-  const title = document.createElement('h2');
-  title.className = "title";
-  title.textContent = subject;
-  const description = document.createElement('p');
-  description.className = "description";
-  description.textContent = description;
+// const createInfo = (subject , description)  => {
+//   const subject = document.createElement('div');
+//   subject.className = "subject";
+//   const title = document.createElement('h2');
+//   title.className = "title";
+//   title.textContent = subject;
+//   const description = document.createElement('p');
+//   description.className = "description";
+//   description.textContent = description;
   // if (hasList === true) {
   //   const list = document.createElement('ul');
   //   list.className = "concepts";
@@ -26,4 +26,4 @@ const createInfo = (subject , description)  => {
   // }
 }
 
-createInfo("Physics" , "lorem23")
+// createInfo("Physics" , "lorem23")
