@@ -259,7 +259,11 @@ body {
         <div class="overlay"></div>
       </div>
 
-    <div id="background"></div>
+      
+    <div id="background">
+
+      
+    </div>
         <div id="chest">
             
         <div class="heart left side top"></div>
@@ -284,7 +288,28 @@ body{
   width: 60%;
   margin:10px auto;
   padding: 10px;
-  background: #fff;
+  background: white;
+}
+.main-2 {
+  opacity: 0;
+  width: 60%;
+  max-width: 80ch;
+  position: absolute;
+  top: 0;
+  font-family: 'DynaPuff', cursive;
+  right: 20%;
+  margin: 1rem;
+  color:rgba(255, 209, 209, 0.568);
+  text-align: center;
+  z-index: 1000000;
+  font-size: 2rem;
+  margin:10px auto;
+  padding: 10px;
+}
+
+
+.main-2 .h2{
+  position:relative;
 }
 .main h2{
   position:relative;
@@ -298,6 +323,7 @@ body{
   opacity: 0;
   animation:cursor 0.5s infinite;
 }
+
 @keyframes cursor{
   0%{
     opacity: 0;
@@ -330,6 +356,7 @@ function typitvs() {
 
 
 
+
     <div class="main">
         <h2 style="color: rgb(250, 143, 157);">اجمل انسانه في الدنيا</h2>
  
@@ -337,16 +364,43 @@ function typitvs() {
     </div>
 
 
+    <script>
+      setTimeout(() => {
+        const main_2 = document.querySelector(".main-2")
+        main_2.style.opacity=1;
+      $(function () {
+typitvss();
+});
+
+function typitvss() {
+var header = $(".main-2 h2");
+var text = $(header).text();
+$(header).text("");
+var x = 0;
+var len = text.length;
+setInterval(function () {
+  if (x < len) {
+    $(header).append(text[x]);
+    x++;
+  }
+}, 80);
+}},6000);
+
+  </script>
+    
+
+
     
     <script>
         const valentine = document.querySelector('.valentine');
         const heartBg = document.getElementById('background');
+        
         const heart = document.getElementById('chest');
         const text = document.querySelector('.main');
         valentine.style.opacity = "0";
         heartBg.style.opacity = "0";
         heart.style.opacity = "0";
-
+      
         heart.style.opacity = "1";
         heartBg.style.opacity = "1";
 
@@ -358,10 +412,18 @@ function typitvs() {
                 valentine.style.opacity = "1";
                 text.style.opacity ="0";
             }, 3400); 
+
         }
 
 
     </script>
+
+<div class="main-2">
+  <h2>
+    إن أعظم وأرقّ ما يحصل عليه المرء في حياته هو قربٌ آمن، دافئ، لطيف وحنون، شخصٌ يحبّه، يلجأ إليه في كل حالاته، يجده في كل حين دون افتقاد، شخصٌ لا يحمل معه عناء التبرير، شخصٌ يجعله يغمض عينيه وهو مطمئن.. لا أكثر.
+  </h2>
+
+</div>
 
 </body>
 </html>
