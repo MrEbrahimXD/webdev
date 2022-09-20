@@ -5,7 +5,7 @@ html{
       height: 100%;
 }
 #svg {
-    transition: opacity 800ms ease-in-out;
+    transition: opacity 1000ms ease-in-out;
     
 }
 
@@ -37,7 +37,7 @@ svg {
 }
   
 .scrollElement {
-    position: absolute;
+    position: relative;
     height: 6000px;
     width: 100px;
     top: 0;
