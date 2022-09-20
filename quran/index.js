@@ -2,12 +2,13 @@ let waitTime = 17000;
 let button = document.getElementById('button');
 let svg = document.getElementById('svg');
 let audio = document.querySelector('audio');
+let moving = document.getElementById('moving');
 button.onclick = () => {
     button.style.visibility = "hidden";
     audio.play();
     $("html, body").animate({ scrollTop: "6000px" },waitTime,() => {
         svg.style.opacity = 0;
-    
+        moving.style.opacity = 1;
     });
 }
 
