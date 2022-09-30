@@ -1,0 +1,129 @@
+This is LuaHBTeX, Version 1.15.0 (MiKTeX 22.7) (format=lualatex 2022.9.24)  30 SEP 2022 11:22
+ restricted system commands enabled.
+**equations.tex
+(./equations.tex
+LaTeX2e <2022-06-01> patch level 5
+Lua module: luaotfload 2022-06-15 3.22 Lua based OpenType font support
+Lua module: lualibs 2021-05-20 2.74 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2021-05-20 2.74 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "C:/Users/sudo rm -rf/AppData/Local/
+MiKTeX/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2022-06-15.lua" from kpse-res
+olved path "C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/tex/luatex/luaotf
+load/fontloader-2022-06-15.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.120
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' at position 1 in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/Users/sudo rm -rf/AppData/Local/
+MiKTeX/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' at position 1 in `glyph_stream_provider'
+.
+Inserting `luaotfload.harf.finalize_vlist' at position 1 in `post_linebreak_filt
+er'.
+Inserting `luaotfload.harf.finalize_hlist' at position 2 in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' at position 1 in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' at position 1 in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' at position 1 in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_
+font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_fon
+t'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch
+_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_fon
+t_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font
+'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'
+. L3 programming layer <2022-07-04>
+Inserting `tracingstacklevels' at position 1 in `input_level_string'.
+("C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls
+"
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+("C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo"
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/Users/sudo rm -rf/AppData/L
+ocal/MiKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz)
+\c@part=\count183
+\c@section=\count184
+\c@subsection=\count185
+\c@subsubsection=\count186
+\c@paragraph=\count187
+\c@subparagraph=\count188
+\c@figure=\count189
+\c@table=\count190
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen137
+)
+("C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3back
+end-luatex.def"
+File: l3backend-luatex.def 2022-07-01 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count191
+\l__pdf_internal_box=\box51
+)
+No file equations.aux.
+
+\openout1 = equations.aux
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+.
+("C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd"
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+[1{C:/Users/sudo rm -rf/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(./equations.aux))
+
+Here is how much of LuaTeX's memory you used:
+ 471 strings out of 477475
+ 100000,383344 words of node,token memory allocated
+ 421 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 7 attribute, 48 glue_spec,
+ 7 attribute_list, 2 write nodes
+   avail lists: 2:94,3:49,4:1,5:44,6:4,7:345,8:36,9:186,11:12
+ 21568 multiletter control sequences out of 65536+600000
+ 25 fonts using 1345055 bytes
+ 33i,5n,37p,154b,182s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<//?/c:/users/sudo rm -rf/appdata/local/programs/miktex/fonts/opentype/public/lm
+/lmroman10-regular.otf><C:/Users/sudo rm -rf/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/sudo rm -rf/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/sudo rm -rf/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/sudo rm
+ -rf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/U
+sers/sudo rm -rf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on equations.pdf (1 page, 49408 bytes).
+
+PDF statistics: 33 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 100000000)
+

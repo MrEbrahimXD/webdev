@@ -1,0 +1,10 @@
+#equations {
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+}
+#equations h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    float: right;
+}
