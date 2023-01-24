@@ -10,11 +10,11 @@ Don't cheat and look at the source code lmao xd
 
 ## What I'm learning RIGHT NOW 
  
-* SASS
-* Tailwind CSS
-* JavaScript
-* React
-* TypeScript
+* SASS - DONE 
+* Tailwind CSS - DONE
+* JavaScript - DONE
+* React - DONE 
+* TypeScript - N O TIME 
 
 
 
