@@ -1,0 +1,191 @@
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&display=swap');
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Aref Ruqaa Ink';
+  transition: opacity 500ms ease-in-out,
+  background-color 500ms ease-in-out;
+}
+#aya,#last {
+  text-align: center;
+  font-size: 2.5rem;
+}
+.container {
+  transition: opacity 500ms ease-in-out;
+}
+#last {
+  visibility: hidden;
+  font-size: 2.5rem;
+  /* z-index: 10000;  */
+  transition: visibility 500ms ease-in-out;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #772B39;
+  transition: opacity 500ms ease-in-out;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+  width: 400px;
+  height: 450px;
+  margin: auto;
+}
+
+.col1-row1 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid #ff0024;
+  transform: rotate(90deg);
+}
+
+.col2-row1 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid #ff3e74;
+  transform: rotate(-90deg);
+}
+
+.col3-row1 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid #ff6e82;
+  transform: rotate(90deg);
+}
+
+.col4-row1 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid #fdd8de;
+  transform: rotate(-90deg);
+}
+
+.col1-row2 > .triangle {
+  border-bottom: 50px solid #ff3e74;
+  border-right: 50px solid #ff3e74;
+  border-top: 50px solid #ff6e81;
+  border-left: 50px solid #ff6e81;
+  transform: rotate(90deg);
+}
+
+.col2-row2 > .triangle {
+  border-bottom: 50px solid #ff0024;
+  border-right: 50px solid #ff0024;
+  border-top: 50px solid #fdd7de;
+  border-left: 50px solid #fdd7de;
+  transform: rotate(180deg);
+}
+
+.col3-row2 > .triangle {
+  border-bottom: 50px solid #ff0023;
+  border-right: 50px solid #ff0023;
+  border-top: 50px solid #ff3e74;
+  border-left: 50px solid #ff3e74;
+  transform: rotate(90deg);
+}
+
+.col4-row2 > .triangle {
+  border-bottom: 50px solid #ff6d81;
+  border-right: 50px solid #ff6d81;
+  border-top: 50px solid #ff0024;
+  border-left: 50px solid #ff0024;
+  transform: rotate(180deg);
+}
+
+.col1-row3 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid #fdd8de;
+  transform: rotate(90deg);
+}
+
+.col2-row3 > .triangle {
+  border-bottom: 50px solid #ff3c73;
+  border-right: 50px solid #ff3c73;
+  border-top: 50px solid #ff6e82;
+  border-left: 50px solid #ff6e82;
+  transform: rotate(180deg);
+}
+
+.col3-row3 > .triangle {
+  border-bottom: 50px solid #fdd8de;
+  border-right: 50px solid #fdd8de;
+  border-top: 50px solid #ff6e81;
+  border-left: 50px solid #ff6e81;
+  transform: rotate(90deg);
+}
+
+.col4-row3 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-left: 100px solid #ff3e74;
+  transform: rotate(0deg);
+}
+
+.col2-row4 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid #ff0024;
+  transform: rotate(0deg);
+}
+
+.col3-row4 > .triangle {
+  border-bottom: 100px solid transparent;
+  border-right: 100px solid #ff3d74;
+  transform: rotate(270deg);
+}
+
+.text {
+  position: absolute;
+  top: 40%;
+  color: #fff;
+  font-size: 40px;
+  font-family: "Felipa", cursive;
+  perspective: 400;
+}
+.text code, .text [data-char=x] {
+  font-size: 18px;
+}
+
+svg #line {
+  fill: none;
+  stroke: #e00000;
+  stroke-width: 1.5;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 5s ease-in-out infinite;
+}
+h1 {
+  /* font-size: 0.75rem; */
+  text-shadow: 2px 2px 5px #772B39;
+  
+}
+svg #point {
+  fill: none;
+  stroke: #f00000;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: .1;
+  stroke-opacity: 1;
+  stroke-dasharray: .0001, .9999;
+  stroke-dashoffset: 1;
+  animation: dash 5s ease-in-out;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
