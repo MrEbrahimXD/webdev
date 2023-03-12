@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="Creator :" content="Ebrahim Ahmed" />
+    <title>freeCodeCamp Survey Form</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+  </head>
+  
+  <body>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help us improve the platform</p>
+
+    <div><form id="survey-form" action="" >
+            <section class="section-1">
+                <label id="name-label">
+                    Name<br>
+                    <input placeholder="Enter your name" type="text" id="name" required>
+                </label>
+            </section>
+            
+            <section class="section-2">
+                <label id="email-label">
+                    Email<br>
+                    <input type="email" id="email" placeholder="Enter your Email" required>
+                </label>
+            </section>
+
+            <section class="section-3">
+                <label id="number-label">
+                    Age (optional)<br>
+                    <input placeholder="Age" type="number" id="number" min="10" max="120">
+                </label>
+            </section>
+
+            <section class="section-4">
+                <label id="select-label">
+                    Which option best describes your current role?<br>
+                    <select name="dropdown" id="dropdown">
+                        <option value="" selected disabled>Select current role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full time job</option>
+                        <option value="3">Full time learner</option>
+                        <option value="4">Prefer not to say</option>
+                        <option value="5">Other</option>
+                    </select>
+                </label>
+            </section>
+            
+            <section id="radio">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label>
+                    <input type="radio" value="definitely" name="radio">
+                    Definitely
+                </label>
+                <label>
+                    <input type="radio" value="maybe" name="radio">
+                    Maybe
+                </label>
+                <label>
+                    <input type="radio" value="not-sure" name="radio">
+                    Not sure
+                </label>
+            </section>
+
+            <section id="bio">
+                <p>What would you like to see improved? (Check all that apply)</p>
+                <br>
+                <label>
+                    <input type="checkbox" value="1" name="checkbox-1" id="checkbox-1">
+                    Back-end Projects
+
+                </label>
+                <label>
+                    <input type="checkbox" value="2" name="checkbox-2" id="checkbox-2">
+                    Data Visualization
+                </label>
+            </section>
+
+            <section id="paragraph">
+                <label>
+                    <p>Any comments or suggestions?</p>
+                    <textarea  placeholder="Enter your comment here" name="bio" id="textarea" cols="40" rows="10"></textarea>
+                </label>
+            </section>
+            <input type="submit" id="submit">
+
+        </form>
+    </div>
+
+
+  </body>
+
+<footer>
+
+</footer>
+
+</html>
