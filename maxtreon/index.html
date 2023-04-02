@@ -1,0 +1,633 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+
+
+
+
+  <meta name="description" content="Maxtreon: The Legendary Hero Who Inspires Courage and Valor">
+    <meta name="keywords" content="Maxtreon, hero, legendary, courage, valor">
+    <meta name="author" content="Maxtreon">
+    <meta property="og:title" content="Maxtreon: The Legendary Hero Who Inspires Courage and Valor">
+    <meta property="og:description" content="Maxtreon is an exceptional hero whose name has become synonymous with courage and valor. His unwavering commitment to righteousness and justice has earned him a well-deserved reputation as a legendary figure.">
+    <meta property="og:image" content="https://media.istockphoto.com/id/1311645857/vector/vector-illustration-sillhouette-of-samurai-worrior-with-sword-on-sunset-backgound.jpg?s=612x612&w=0&k=20&c=qsggkAT1KA0xvqFo-08jLvEWevL8IRvPQEfHOZQC_vw=">
+    <meta property="og:url" content="https://mrebrahimxd.com/Maxtreon">
+  <title>Maxtreon: The Legendary Hero Who Inspires Courage and Valor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/prismjs/themes/prism-coy.css">
+  <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.css">
+  <link rel="stylesheet" href="https://unpkg.com/jsvi@0.1.0/vi.css">
+
+  <style>
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .main-2 {
+      opacity: 0;
+      width: 65%;
+      max-width: 80ch;
+      position: absolute;
+      bottom: 5%;
+      font-family: "Press Start 2P";
+      right: 0;
+      left: 0;
+      margin: 1rem;
+      color: rgba(255, 209, 209, 0.568);
+      text-align: center;
+      z-index: 1000000;
+      font-size: 2rem;
+      margin: 10px auto;
+      padding: 10px;
+    }
+
+    .neonText {
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+    body {
+      padding: 0;
+      margin: 0;
+      background: #000;
+      min-height: 100vh;
+    }
+
+    html {
+      font-size: 10px;
+    }
+
+    .intro-btn {
+      font-size: 3rem;
+    }
+
+    :root {
+      --btn-csgo-start: #49be25;
+    }
+
+    #intro-svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    #intro-animation {
+      background: black;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .btn {
+      position: fixed;
+      bottom: 5%;
+      right: 0px;
+      transform: translateX(-50%);
+      border: 1px solid var(--btn-csgo-start);
+      border-radius: 5px;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.7em;
+      background-color: transparent;
+      color: var(--btn-csgo-start);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 11;
+    }
+
+    .btn:hover {
+      background: #ffffff;
+      color: #1b1734;
+    }
+
+    .csgo-btn {
+      width: 50%;
+      height: 10%;
+    }
+
+    .waiting {
+      visibility: hidden;
+    }
+
+    .done {
+      visibility: hidden;
+    }
+
+    .terminal {
+      --size: 2;
+      height: 100vh;
+      display: none;
+    }
+
+    #Maxtreon {
+      z-index: 100000;
+      display: none;
+      height: 100vh;
+      width: 100%;
+    }
+
+    #Maxtreon h1 {
+      position: absolute;
+      top: 50%;
+      -webkit-animation: font-size 0.2s ease-in-out;
+      animation: font-size 0.2s ease-in-out;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10rem;
+      font-family: "Press Start 2P", cursive;
+      color: #fff;
+    }
+
+    @-webkit-keyframes font-size {
+      0% {
+        font-size: 10rem;
+      }
+
+      50% {
+        font-size: 15rem;
+      }
+
+      100% {
+        font-size: 10rem;
+      }
+    }
+
+    @keyframes font-size {
+      0% {
+        font-size: 10rem;
+      }
+
+      50% {
+        font-size: 15rem;
+      }
+
+      100% {
+        font-size: 10rem;
+      }
+    }
+
+    @-webkit-keyframes font-size-transition {
+      0% {
+        font-size: 20rem;
+      }
+
+      50% {
+        font-size: 10rem;
+      }
+
+      100% {
+        font-size: 20rem;
+      }
+    }
+
+    @keyframes font-size-transition {
+      0% {
+        font-size: 20rem;
+      }
+
+      50% {
+        font-size: 10rem;
+      }
+
+      100% {
+        font-size: 20rem;
+      }
+    }
+  </style>
+
+  <script>
+    window.console = window.console || function (t) { };
+  </script>
+
+
+
+</head>
+
+<body translate="no">
+  <audio id="hype">
+    <source src="https://mrebrahimxd.com/robot.mp4" type="audio/mp4">
+  </audio>
+  <div class="term terminal" id="term"
+    style="--terminal-height:821.333; --terminal-x:0; --terminal-y:0; --terminal-scroll:0;">
+    
+    <div class="terminal-font">&nbsp;</div>
+    <div class="terminal-pixel"></div>
+  </div>
+  <div id="Maxtreon">
+    <h1>MAXTREON</h1>
+    <div class="main-2" id="main-2">
+      <h2>a hero in every sense of the word, with a heart of gold and a spirit that never quits. His unwavering
+        determination and fearless nature inspire me to be a better person every day. He's a legend</h2>
+    </div>
+  </div>
+  <section id="intro-animation">
+    <svg id="intro-svg" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="smooth__corners">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -20"></feColorMatrix>
+        </filter>
+        <filter id="strong__blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="20"></feGaussianBlur>
+        </filter>
+        <linearGradient id="flame__gradient" gradientUnits="userSpaceOnUse" x1="67.9091" y1="167.4466" x2="67.9091"
+          y2="6.1774">
+          <stop offset="0.2955" style="stop-color:#49be25          "></stop>
+          <stop offset="1" style="stop-color:#9fdbf7"></stop>
+        </linearGradient>
+      </defs>
+      <g filter="url(#strong__blur)">
+        <circle cx="119" cy="146" r="200" fill="none"></circle>
+        <circle cx="119" cy="146" r="30">
+          <animate attributeType="XML" attributeName="fill" values="#49be25
+; #9fdbf780; #49be25
+" dur="1.4s"
+            repeatCount="indefinite"></animate>
+        </circle>
+      </g>
+      <g filter="url(#smooth__corners)">
+        <path fill="url(#flame__gradient)" stroke="#49be25" stroke-width="1">
+          <animate attributeName="d" dur="1s" repeatCount="indefinite" calcMode="linear"
+            values="M124.1 168.1C102.1 168.7 100.9 163 95.1 152.6C91.1 145.4 91.8 145.5 90.8 140.1C90.1 136.4 89.3 132.2 88.6 127.6C87 116.4 93.1 99.9 96.6 95.6C97.5 94.4 96.2 101 96.6 104.6C97.1 109.1 100.1 109.1 101.6 102.6C103.1 96.1 112.6 82.1 115.1 75.6C117.1 70.4 112 73.7 109.6 74.1C108 74.3 105.3 71 104.1 64.6C102.6 56.6 112.6 50.6 114.1 49.1C115.6 47.6 122.1 39.6 120.6 37.1C118.2 33.1 133.6 31.5 135.1 31.6C137.2 31.8 128.5 36.2 124.1 42.6C118.6 50.6 122.6 59.1 129.6 64.6C135.2 69 140.7 85.8 137.6 91.1C137.2 91.7 135.2 90.5 131.6 94.1C127.1 98.6 124.1 104.1 132.6 112.6C139.4 119.4 141.2 109.9 142.1 111.1C147.4 118.4 154.6 130.4 154.6 135.6C154.6 140.8 150.1 153.5 145.1 156.1C144 156.7 141.3 156.2 140.1 156.1C137.6 155.9 142.6 167.6 124.1 168.1Z;
+          M126.8 167.6C105.5 173.2 91.5 153 88.8 132.1C88.5 130 99.9 132 98.8 126.6C98.1 122.9 96.3 113.6 93.8 109.6C87.8 100 92.1 125.7 88.8 120.6C85.1 115 83.9 96.5 84.3 100.1C84.8 104.6 82.8 86.3 87.1 81.1C91.6 75.6 90.1 66 92.3 72.6C98.3 90.1 114.9 83.5 121.3 72.6C125.2 66 122.5 61.5 121.3 55.1C119.8 47.1 115.3 56.5 114.8 55.1C112.3 47.6 113.6 45.1 114.3 41.1C115.6 34.2 123.4 23.1 123.3 23.6C123 25.7 119.3 39.6 128.1 44.6C136.5 49.4 136.1 51.6 136.1 60.6C136.1 69.8 135.3 71.5 136.8 78.1C137 78.8 131.7 74.5 128.1 78.1C123.6 82.6 121.8 90.6 130.3 99.1C137.1 105.9 140.3 98.9 140.3 95.6C140.3 94.3 149.7 108.6 151.3 113.6C154.8 124.6 154.9 130.9 152.3 139.1C152 139.9 146.8 129.2 146.3 131.1C144.8 137.1 153.3 160.6 126.8 167.6Z;
+          M120.5,177C99,182,85,154.2,84.1,147.2c-1.9-14.8,0.6-15.4,2.2-20.7c1.6-5,1,4.5,3.5,0.5 c9.2-14.7,26-23,23.9-28.7c-1.1-3-2.4-23.1-15.4-13.8c-1.7,1.2-2.9-5.2-3.3-11.8c-0.5-8,3.8-12.2,3-10.9c-0.4,0.6-0.8,3.3-0.2,2.5 c3.2-4,1.8-5.5,9-8.1c8.6-3.2,7.7-6.9,7.9-4.6c0.3,3-3.4,5.3-3.4,13c0,1.7,3.8,2.4,3.4,3c-1.5,2.4-6.4,3.4,11.4,9.2 c5,1.6,5.1,6.8,6.6,5c6.2-6.9,2.2-11.3,1.8-11.5c-1.8-0.9,6.3,1.1,9.6,9.1c0.6,1.4,3.4,7.6-0.6,19c-0.5,1.4-4.1-8.3-4.3-7.1 c-4.4,23.4-15,19.1-12.1,22.7c7.2,9.1,14.6,35.1,17.6,21.4c0.7-3.3,4.1,8.1,2.7,16.3C146.6,157.7,146.2,171,120.5,177z;
+          M120.5,173.7c-21.1,6.4-36.9-29.2-24.5-42.5c13.3-14.2,27.9-11.6,27-17c-3.2-19.4-15.7-0.2-19-3.5c-13-13,3.2-13.2-0.1-18.3 c-3.7-5.6-8.5-0.1-8.5,3.5c0,0.5-0.6,1.7-1-5c-0.5-8,8.2-12.6,8.5-11c5,30.5,14.1,2.4,22.3-6.3c8-8.5-8.7-18.1-9.9-24.5 c-1.5-8,1.4-4.9-2.8-12.9c-1.5-2.8-1.7-4-1-8c1.3-6.9,10-10.5,9.5-10c-4.4,4.4-7.4,11,7.1,24c3.9,3.5,7.9,6,7.9,15 c0,9.2-1.2,13.2-1.5,13c-1.8-0.9-4.4-0.6-8,3c-4.5,4.5-11,15-2.5,23.5c6.8,6.8,16.1-3.4,17-2.5c5.2,5.2,7.5,13,9.1,18 c3.5,11,2.9,9.1,0.9,14.5c-0.3,0.8-3-6.5-8-1C138.8,130.2,160,161.7,120.5,173.7z;
+          M124.1 168.1C102.1 168.7 100.9 163 95.1 152.6C91.1 145.4 91.8 145.5 90.8 140.1C90.1 136.4 89.3 132.2 88.6 127.6C87 116.4 93.1 99.9 96.6 95.6C97.5 94.4 96.2 101 96.6 104.6C97.1 109.1 100.1 109.1 101.6 102.6C103.1 96.1 112.6 82.1 115.1 75.6C117.1 70.4 112 73.7 109.6 74.1C108 74.3 105.3 71 104.1 64.6C102.6 56.6 112.6 50.6 114.1 49.1C115.6 47.6 122.1 39.6 120.6 37.1C118.2 33.1 133.6 31.5 135.1 31.6C137.2 31.8 128.5 36.2 124.1 42.6C118.6 50.6 122.6 59.1 129.6 64.6C135.2 69 140.7 85.8 137.6 91.1C137.2 91.7 135.2 90.5 131.6 94.1C127.1 98.6 124.1 104.1 132.6 112.6C139.4 119.4 141.2 109.9 142.1 111.1C147.4 118.4 154.6 130.4 154.6 135.6C154.6 140.8 150.1 153.5 145.1 156.1C144 156.7 141.3 156.2 140.1 156.1C137.6 155.9 142.6 167.6 124.1 168.1Z">
+          </animate>
+        </path>
+        <circle cx="119" cy="146" r="18" fill="fill="#49be25"></circle>
+      </g>
+      <circle cx="119" cy="146" r="17" fill="#19020f"></circle>
+    </svg>
+
+    <button id="intro-btn" class="btn csgo-btn">START</button>
+
+  </section>
+  <script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jcubic/static@master/js/wcwidth.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/jquery.terminal.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-polyfills/keyboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/unix_formatting.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.8.1/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/less.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.terminal/js/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/browserfs@1.4.3/dist/browserfs.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvi@0.1.0/vi.js"></script>
+  <script id="rendered-js">
+    // Notes :
+    // 1.START BUTTON TO SUPPORT CHROME PRIVACY SETTINGS
+    // 2.TO ADD ATTRACTIVE TRANSITION EFFECT
+    // 3.COMPLETE REST OF THE MAGIC.
+    const main_2 = document.querySelector('.main-2');
+    const Maxtreon = document.getElementById('Maxtreon');
+    const terminal = document.getElementById('term');
+    const svgWaiting = document.querySelector("#intro-svg");
+    const startButton = document.querySelector("#intro-btn");
+    const audio = document.querySelector('#hype');
+    const element = document.querySelector('#Maxtreon h1');
+    function changeAnimation(animationName, animationDuration, animationDelay) {
+      element.style.animationName = animationName;
+      element.style.animationDuration = animationDuration;
+      element.style.animationDelay = animationDelay;
+    }
+    function restartAnimation() {
+      element.style.animationPlayState = 'paused';
+      element.style.animation = 'none';
+      void element.offsetWidth; // Trigger a reflow, flushing the CSS changes
+      element.style.animation = null;
+      element.style.animationPlayState = 'running';
+    }
+    // document.addEventListener("onload", function () {
+    startButton.onclick = () => {
+      audio.play();
+      svgWaiting.style.display = "none";
+      startButton.style.display = "none";
+      terminal.style.display = "block";
+    };
+    // });
+
+
+    // Terminal JavaScript
+
+    BrowserFS.configure({ fs: "IndexedDB", options: {} }, function (err) {
+
+      window.fs = BrowserFS.BFSRequire("fs");
+      window.path = BrowserFS.BFSRequire("path");
+
+      // --------------------------------------------------------------
+      function list(path) {
+        term.pause();
+        return listDir(path).then(list => (term.resume(), list));
+      }
+      // --------------------------------------------------------------
+      function get_path(string) {
+        var path = cwd.replace(/^\//, '').split('/');
+        if (path[0] === '') {
+          path = path.slice(1);
+        }
+        var parts = string === '/' ?
+          string.split('/') :
+          string.replace(/\/?[^\/]*$/, '').split('/');
+        if (parts[0] === '') {
+          parts = parts.slice(1);
+        }
+        if (string === '/') {
+          return [];
+        } else if (string.startsWith('/')) {
+          return parts;
+        } else if (path.length) {
+          return path.concat(parts);
+        } else {
+          return parts;
+        }
+      }
+      // --------------------------------------------------------------
+      function read(cmd, cb) {
+        var filename = typeof cmd === 'string' ? cmd : cmd.args.length == 1 ? cwd + '/' + cmd.args[0] : null;
+        if (filename) {
+          term.pause();
+          fs.readFile(filename, function (err, data) {
+            if (err) {
+              term.error(err.message);
+            } else {
+              cb(data.toString());
+            }
+            term.resume();
+          });
+        } else {
+          term.error('No filename');
+        }
+      }
+      window.resolve = function resolve(path) {
+        if (path[0] === '/') {
+          return path;
+        } else {
+          return window.path.resolve(window.path.join(cwd, path));
+        }
+      };
+      // --------------------------------------------------------------
+      function mkdir(path) {
+        path = resolve(path);
+        return new Promise((resolve, reject) => {
+          fs.stat(path, (err, stat) => {
+            if (err) {
+              fs.mkdir(path, function (err) {
+                if (err) {
+                  reject(err.message);
+                } else {
+                  resolve();
+                }
+              });
+            } else if (stat.isFile()) {
+              reject(`${path} is file`);
+            } else {
+              resolve();
+            }
+          });
+        });
+      }
+
+      // --------------------------------------------------------------
+      window.cwd = '/';
+      var commands = {
+        start: function (cmd) {
+          audio.currentTime = 195;
+          term.echo(`Entering Maxtreon's basement..`);
+          setTimeout(() => {
+            term.echo(`Access Granted..`);
+          }, 2000);
+          setTimeout(() => {
+            term.echo(`Entering...`);
+          }, 4000);
+          setTimeout(() => {
+            terminal.style.display = "none";
+            Maxtreon.style.display = "block";
+
+          }, 7400);
+          setTimeout(() => {
+            changeAnimation('font-size-transition', '0.2s', '0s');
+
+          }, 11100);
+          setTimeout(() => {
+            typewriterEffect(`a hero in every sense of the word, with a heart of gold and a spirit that never quits. His unwavering determination and fearless nature inspire me to be a better person every day. He's a legend`, 'main-2');
+            main_2.style.opacity = 1;
+          }, 14000);
+        },
+        help: function (cmd) {
+          term.echo(`Available commands: ${Object.keys(commands).join(', ')}`);
+        }
+      };
+
+
+
+
+
+
+
+
+
+      // --------------------------------------------------------------
+      var term = $('.term').terminal(command => {
+        var cmd = $.terminal.parse_command(command);
+        if (commands[cmd.name]) {
+          commands[cmd.name].call(term, cmd);
+        } else {
+          term.error('Command not found');
+        }
+      }, {
+        checkArity: false,
+        greetings: `Welcome to Maxtreon's basement:\nType [[;white;]start] to enter securely\n`,
+        prompt: function () {
+          return [
+            color('green', 'maxtreon@mrebrahimxd.com'),
+            ':',
+            color('blue', cwd),
+            '$ '].
+            join('');
+        },
+        completion: function (string, cb) {
+          var cmd = $.terminal.parse_command(this.before_cursor());
+          function processAssets(callback) {
+            var dir = get_path(string);
+            list('/' + dir.join('/')).then(callback);
+          }
+          function prepend(list) {
+            if (string.match(/\//)) {
+              var path = string.replace(/\/[^\/]+$/, '').replace(/\/+$/, '');
+              return list.map(dir => path + '/' + dir);
+            } else {
+              return list;
+            }
+          }
+          function trailing(list) {
+            return list.map(dir => dir + '/');
+          }
+          if (cmd.name !== string) {
+            switch (cmd.name) {
+              // complete file and directories
+              case 'cat':
+              case 'vi':
+              case 'less':
+                return processAssets(content => cb(prepend(trailing(content.dirs).concat(content.files))));
+              // complete directories
+              case 'ls':
+              case 'cd':
+                return processAssets(content => cb(prepend(trailing(content.dirs))));
+            }
+
+          }
+          cb(Object.keys(commands));
+        }
+      });
+
+    });
+    // -------------------------------------------------------------------
+    function color(name, string) {
+      var colors = {
+        blue: '#55f',
+        green: '#4d4',
+        grey: '#999',
+        red: '#A00',
+        yellow: '#FF5',
+        violet: '#a320ce',
+        white: '#fff'
+      };
+
+      if (colors[name]) {
+        return '[[;' + colors[name] + ';]' + string + ']';
+      } else {
+        return string;
+      }
+    }
+    // -------------------------------------------------------------------
+    function listDir(path) {
+      return new Promise(function (resolve, reject) {
+        fs.readdir(path, function (err, dirList) {
+          if (err) {
+            return reject(err);
+          }
+          var result = {
+            files: [],
+            dirs: []
+          };
+
+          var len = dirList.length;
+          if (!len) {
+            resolve(result);
+          }
+          dirList.forEach(function (filename) {
+            var file = (path === '/' ? '' : path) + '/' + filename;
+
+            fs.stat(file, function (err, stat) {
+              if (stat) {
+                result[stat.isFile() ? 'files' : 'dirs'].push(filename);
+              }
+              if (! --len) {
+                resolve(result);
+              }
+            });
+          });
+
+        });
+      });
+    }
+    // -------------------------------------------------------------------
+    function split_args(args) {
+      return {
+        options: args.filter(arg => arg.match(/^-/)).join('').replace(/-/g, ''),
+        args: args.filter(arg => !arg.match(/^-/))
+      };
+
+    }
+
+    // this is how you can create backed as replecement for BrowserFS
+    // this url need to point to JSON-RPC service you can easily create
+    // using library for your backend language of choice
+    var json_rpc_url = 'backend.php';
+    function cb_call(method, args, cb) {
+      $.jrpc(json_rpc_url, method, args, function (resp) {
+        if (resp.error) {
+          cb(resp.error);
+        } else {
+          cb(null, resp.result);
+        }
+      }, function (err, status) {
+        cb(status);
+      });
+    }
+    // same API as BrowserFS that's based on node.js
+    var backendFS = {
+      readFile: function (path, cb) {
+        cb_call('readFile', [path], cb);
+      },
+      stat: function (path, cb) {
+        cb_call('stat', [path], function (err, result) {
+          if (err) {
+            cb(err);
+          } else {
+            cb(err, {
+              isFile: function () {
+                return result === 'file';
+              },
+              isDirectory: function () {
+                return result === 'directory';
+              }
+            });
+
+          }
+        });
+      },
+      readdir: function (path, cb) {
+        cb_call('readdir', [path], cb);
+      }
+    };
+
+
+    function typewriterEffect(text, elementId) {
+      let i = 0;
+      const speed = 50; // adjust as needed
+      const element = document.getElementById(elementId);
+      element.innerHTML = '';
+      const intervalId = setInterval(function () {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(intervalId);
+        }
+      }, speed);
+
+      // Add the blinking cursor
+      setInterval(function () {
+        const borderRightStyle = element.style.borderRight;
+        element.style.borderRight = borderRightStyle ? '' : '2px solid black';
+      }, 500); // adjust as needed
+    }
+//# sourceURL=pen.js
+  </script>
+
+
+
+
+</body>
+
+</html>
