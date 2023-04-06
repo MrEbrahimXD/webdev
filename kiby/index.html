@@ -211,6 +211,9 @@
   <audio id="hype">
     <source src="https://mrebrahimxd.com/robot.mp4" type="audio/mp4">
   </audio>
+  <audio id="nasheed">
+    <source  src="Maula Ya Salli Wa Sallim - Beautiful Nasheed ( English subtitles ).mp3">
+  </audio>
   <div class="term terminal" id="term"
     style="--terminal-height:821.333; --terminal-x:0; --terminal-y:0; --terminal-scroll:0;">
     
@@ -288,8 +291,10 @@
     const terminal = document.getElementById('term');
     const svgWaiting = document.querySelector("#intro-svg");
     const startButton = document.querySelector("#intro-btn");
-    const audio = document.querySelector('#hype');
+    const audio = document.getElementById('hype');
     const element = document.querySelector('#kiby h1');
+
+    const nasheedAudio = document.getElementById('nasheed'); 
     function changeAnimation(animationName, animationDuration, animationDelay) {
       element.style.animationName = animationName;
       element.style.animationDuration = animationDuration;
@@ -420,6 +425,26 @@
         },
         help: function (cmd) {
           term.echo(`Available commands: ${Object.keys(commands).join(', ')}`);
+        },
+        join: function() {
+          audio.currentTime = 400;
+          nasheedAudio.play();
+          const i = 0;
+          const element = '';
+          const text = `\n"O My lord send peace and blessings upon your beloved (PBUH). The best of all creations. "\n`;
+          
+          setTimeout(() => {
+            term.echo(`Entering Kiby's server..`);
+          }, 1000);
+          setTimeout(() => {
+            term.echo(text);
+          }, 2000);
+          setTimeout(() => {
+            term.echo('Entering ...')
+          }, 12000);
+          setTimeout(() => {
+            window.location =  "https://discord.gg/j5f4cbraBS";
+          },  14000);
         }
       };
 
@@ -441,7 +466,7 @@
         }
       }, {
         checkArity: false,
-        greetings: `Welcome to Kiby's basement:\nType [[;white;]start] to enter securely\n`,
+        greetings: `Welcome to Kiby's basement:\nType [[;white;]start] to enter securely\nType [[;white;]join] to join kiby's server\n`,
         prompt: function () {
           return [
             color('blue', 'kiby@mrebrahimxd.com'),
