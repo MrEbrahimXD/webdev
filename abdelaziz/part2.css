@@ -1,0 +1,29 @@
+#moving {
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#photokarima {
+    position:  absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    top: 5%;
+}
+
+#drkarima {
+    position: absolute;
+    border: 3px solid #ffbaa7;
+    border-radius: 20px;
+    padding: 8px;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    font-size: 200%;
+    text-align: center;
+    font-family: 'Amiri Quran', serif;
+    transform: translateX(-50%) translateY(300px)
+}
