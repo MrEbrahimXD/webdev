@@ -1,0 +1,17 @@
+[
+  {
+    "title": "الحديث الأول",
+    "p": "هذا هو النص التوضيحي الأول عن الحديث.",
+    "img": "https://via.placeholder.com/400x300?text=Image+1"
+  },
+  {
+    "title": "الحديث الثاني",
+    "p": "هذا هو النص التوضيحي الثاني عن الحديث.",
+    "img": "https://via.placeholder.com/400x300?text=Image+2"
+  },
+  {
+    "title": "الحديث الثالث",
+    "p": "هذا هو النص التوضيحي الثالث عن الحديث.",
+    "img": "https://via.placeholder.com/400x300?text=Image+3"
+  }
+]
