@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إلى حبيبتي إسراء - نعم دار المتقين</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            /* خلفية متغيرة الألوان */
+            background: linear-gradient(-45deg, #020111, #191629, #20202c, #3a1c71);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            font-family: 'Amiri', serif;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        #canvas-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* طبقة الأمواج (الأنهار) */
+        .waves-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            z-index: 2;
+            overflow: hidden;
+            opacity: 0.6;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z" fill="rgba(255, 255, 255, 0.1)"/></svg>');
+            background-repeat: repeat-x;
+            background-size: 50% 100%;
+        }
+
+        .wave1 { animation: waveMove 10s linear infinite; z-index: 1000; opacity: 1; background-position-x: 0; }
+        .wave2 { animation: waveMove 15s linear infinite reverse; z-index: 999; opacity: 0.5; bottom: 10px; }
+        .wave3 { animation: waveMove 20s linear infinite; z-index: 998; opacity: 0.2; bottom: 15px; }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        #content-layer {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* النصوص */
+        .verse-text {
+            font-size: 2.5rem;
+            line-height: 1.6;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.4);
+            color: #fceabb;
+            backface-visibility: hidden;
+            /* زيادة سمك الخط للقراءة */
+            font-weight: 700; 
+        }
+
+        /* الحركات المتنوعة للنصوص */
+        .anim-type-1 { animation: fadeInUpRotate 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .anim-type-2 { animation: scaleInBlur 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .anim-type-3 { animation: slideInElastic 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .anim-type-4 { animation: flipIn 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+        .anim-type-5 { animation: popIn 4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+
+        @keyframes fadeInUpRotate {
+            0% { opacity: 0; transform: translateY(50px) rotate(-5deg); filter: blur(5px); }
+            100% { opacity: 1; transform: translateY(0) rotate(0deg); filter: blur(0); }
+        }
+        @keyframes scaleInBlur {
+            0% { opacity: 0; transform: scale(1.5); filter: blur(10px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0); }
+        }
+        @keyframes slideInElastic {
+            0% { opacity: 0; transform: translateX(-100px); }
+            60% { transform: translateX(10px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes flipIn {
+            0% { opacity: 0; transform: perspective(400px) rotateX(90deg); }
+            100% { opacity: 1; transform: perspective(400px) rotateX(0deg); }
+        }
+        @keyframes popIn {
+            0% { opacity: 0; transform: scale(0); }
+            80% { transform: scale(1.1); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .verse-exit {
+            animation: textExit 1s ease forwards;
+        }
+        @keyframes textExit {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.8) translateY(-20px); filter: blur(5px); }
+        }
+
+        /* الزر */
+        .golden-btn {
+            background: linear-gradient(45deg, #d4af37, #f2d06b, #d4af37);
+            background-size: 200% 200%;
+            animation: gradientBG 3s ease infinite;
+            color: #1a1a1a;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 15px 50px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Reem Kufi', sans-serif;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+            transition: transform 0.3s;
+            z-index: 50;
+        }
+        .golden-btn:hover { transform: scale(1.1); }
+
+        /* العناصر الثابتة */
+        .lantern-container {
+            position: absolute;
+            top: -20px;
+            right: 10%;
+            width: 100px;
+            animation: swing 4s infinite ease-in-out alternate;
+            z-index: 5;
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+        }
+        @keyframes swing {
+            0% { transform: rotate(8deg); }
+            100% { transform: rotate(-8deg); }
+        }
+
+        .moon {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 15px 15px 0 0 #fceabb;
+            filter: drop-shadow(0 0 20px rgba(252, 234, 187, 0.6));
+            z-index: 2;
+            animation: floatMoon 8s infinite ease-in-out;
+        }
+        @keyframes floatMoon {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+
+        .arabesque {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z' fill='none' stroke='%23d4af37' stroke-width='1'/%3E%3C/svg%3E");
+            animation: rotateBg 80s linear infinite;
+        }
+        @keyframes rotateBg {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4d6d;
+            font-size: 2rem;
+            animation: heartFloat 3s ease-out forwards;
+            z-index: 4;
+            filter: drop-shadow(0 0 5px rgba(255, 77, 109, 0.5));
+        }
+        @keyframes heartFloat {
+            0% { transform: translateY(0) scale(0) rotate(0); opacity: 0; }
+            20% { opacity: 1; transform: scale(1.2); }
+            100% { transform: translateY(-150px) scale(1) rotate(20deg); opacity: 0; }
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+
+    <!-- Canvas للنجوم والشهب والغبار الذهبي -->
+    <canvas id="canvas-container"></canvas>
+    
+    <!-- الصوت -->
+    <audio id="poem-audio" src="https://download.media.islamway.net/several/333/09_aumneh.mp3" preload="auto"></audio>
+
+    <!-- الخلفيات -->
+    <div class="arabesque"></div>
+    <div class="moon"></div>
+
+    <!-- الأمواج في الأسفل -->
+    <div class="waves-container">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+
+    <!-- الفانوس -->
+    <div class="lantern-container">
+        <svg viewBox="0 0 100 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="0" x2="50" y2="40" stroke="#d4af37" stroke-width="2"/>
+            <path d="M30 40 L70 40 L80 60 L20 60 Z" fill="#b8860b"/>
+            <path d="M20 60 L80 60 L90 120 L10 120 Z" fill="rgba(255, 215, 0, 0.2)" stroke="#d4af37" stroke-width="2"/>
+            <path d="M10 120 L90 120 L50 160 Z" fill="#b8860b"/>
+            <circle cx="50" cy="90" r="15" fill="#fff" filter="url(#glow)"/>
+            <defs>
+                <filter id="glow">
+                    <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+        </svg>
+    </div>
+
+    <!-- المحتوى -->
+    <div id="content-layer">
+        
+        <!-- البداية -->
+        <div id="start-screen" class="flex flex-col items-center space-y-8 px-4 z-50">
+            <div class="relative">
+                <div class="absolute inset-0 blur-xl bg-yellow-400 opacity-20 rounded-full"></div>
+                <h1 class="relative text-5xl md:text-7xl font-bold text-yellow-100 drop-shadow-2xl mb-4" style="font-family: 'Reem Kufi', sans-serif;">
+                    إلى حبيبتي <span class="text-yellow-400">إسراء</span>
+                </h1>
+            </div>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-lg leading-relaxed drop-shadow-md">
+                إلى رفيقة الدرب في الدنيا والجنة بإذن الله<br>
+                <span class="text-sm opacity-80">(يُفضل استخدام سماعات)</span>
+            </p>
+            <button onclick="startExperience()" class="golden-btn">
+                ابدأ الرحلة ❤️
+            </button>
+        </div>
+
+        <!-- القصيدة -->
+        <div id="poem-screen" class="hidden w-full max-w-4xl px-4 flex flex-col items-center justify-center min-h-[60vh]">
+            <div id="verse-container" class="relative w-full text-center">
+                <div id="verse-display" class="verse-text p-4">
+                    <!-- النص هنا -->
+                </div>
+            </div>
+        </div>
+
+        <!-- النهاية -->
+        <div id="end-screen" class="hidden flex flex-col items-center space-y-6 px-4 z-50">
+            <h2 class="text-4xl md:text-6xl text-yellow-300 mb-4 animate-bounce" style="animation-duration: 3s;">جمعنا الله فيها</h2>
+            <p class="text-2xl font-light">يا قرة عيني يا إسراء</p>
+            <div class="text-6xl mt-4 animate-pulse text-red-500">❤️</div>
+            <button onclick="location.reload()" class="mt-8 text-white border border-yellow-500 rounded-full px-8 py-3 hover:bg-yellow-500 hover:text-black transition">
+                إعادة المشاهدة
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // --- بيانات القصيدة ---
+        const poem = [
+            "نِعْمَ أجرُ العاملين",
+            "نِعْمَ دارُ المتقين",
+            "سلعةُ اللهِ جِنان",
+            "مهرُها تقوى ودين",
+            "باعها اللهُ لقومٍ",
+            "هم عبادٌ مؤمنون",
+            "آمنوا باللهِ ربّاً",
+            "صدّقوا الهادي الأمين",
+            "ليس في الجنّاتِ بؤسٌ",
+            "لا ولا فيها شجون",
+            "إنها دارُ خلودٍ",
+            "لا يدانيها المنون",
+            "ماؤها ماءٌ زلالٌ",
+            "في كؤوسٍ من معين",
+            "وبها أنهارُ خمرٍ",
+            "لذةٌ للشاربين",
+            "ونعيمٌ ليس يفنى",
+            "رزقُ ربِّ العالمين",
+            "وعناقيدٌ تدلّت",
+            "بالجنا للطالبين"
+        ];
+
+        // --- Canvas المتطور: نجوم، شهب، غبار ذهبي ---
+        const canvas = document.getElementById('canvas-container');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        
+        let stars = [];
+        let shootingStars = [];
+        let goldenDust = [];
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        // 1. نجوم الخلفية
+        class Star {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.size = Math.random() * 2;
+                this.opacity = Math.random();
+                this.fadeSpeed = Math.random() * 0.02 + 0.005;
+            }
+            update() {
+                this.opacity += this.fadeSpeed;
+                if (this.opacity > 1 || this.opacity < 0) this.fadeSpeed = -this.fadeSpeed;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(this.opacity)})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        // 2. الشهب
+        class ShootingStar {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height * 0.5; // النصف العلوي
+                this.len = Math.random() * 80 + 10;
+                this.speed = Math.random() * 10 + 6;
+                this.size = Math.random() * 1 + 0.1;
+                // زاوية السقوط
+                this.angle = 20 + Math.random() * 20; // درجات
+                this.dx = Math.cos(this.angle * Math.PI / 180) * this.speed;
+                this.dy = Math.sin(this.angle * Math.PI / 180) * this.speed;
+                this.life = 0;
+                this.maxLife = 100;
+                this.active = false;
+            }
+            activate() {
+                this.reset();
+                this.x = Math.random() * width - 200; // ابدأ من اليسار قليلاً
+                this.y = Math.random() * 200;
+                this.active = true;
+            }
+            update() {
+                if (!this.active) return;
+                this.x += this.dx;
+                this.y += this.dy;
+                this.life++;
+                if (this.life > this.maxLife || this.x > width || this.y > height) {
+                    this.active = false;
+                }
+            }
+            draw() {
+                if (!this.active) return;
+                const tailX = this.x - this.dx * 5; // طول الذيل
+                const tailY = this.y - this.dy * 5;
+                
+                const gradient = ctx.createLinearGradient(this.x, this.y, tailX, tailY);
+                gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
+                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = 2;
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(tailX, tailY);
+                ctx.stroke();
+            }
+        }
+
+        // 3. الغبار الذهبي المتصاعد (Noor Particles)
+        class GoldenParticle {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = height + Math.random() * 100;
+                this.size = Math.random() * 3;
+                this.speedY = Math.random() * 1 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5 + 0.2;
+            }
+            update() {
+                this.y -= this.speedY;
+                this.x += this.speedX;
+                if (this.y < -10) this.reset();
+            }
+            draw() {
+                ctx.fillStyle = `rgba(255, 215, 0, ${this.opacity})`; // لون ذهبي
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initScene() {
+            stars = [];
+            for (let i = 0; i < 200; i++) stars.push(new Star());
+            
+            shootingStars = [];
+            for (let i = 0; i < 5; i++) shootingStars.push(new ShootingStar()); // 5 شهب محتملة
+
+            goldenDust = [];
+            for (let i = 0; i < 60; i++) goldenDust.push(new GoldenParticle());
+        }
+
+        function animateScene() {
+            ctx.clearRect(0, 0, width, height);
+
+            // رسم النجوم
+            stars.forEach(s => { s.update(); s.draw(); });
+
+            // رسم الشهب (تفعيل عشوائي)
+            shootingStars.forEach(s => {
+                if (!s.active && Math.random() < 0.01) s.activate(); // 1% احتمال في كل فريم
+                s.update();
+                s.draw();
+            });
+
+            // رسم الغبار الذهبي
+            goldenDust.forEach(g => { g.update(); g.draw(); });
+
+            requestAnimationFrame(animateScene);
+        }
+
+        window.addEventListener('resize', resize);
+        resize();
+        initScene();
+        animateScene();
+
+
+        // --- منطق العرض والقصيدة ---
+        
+        const animationClasses = [
+            'anim-type-1', 'anim-type-2', 'anim-type-3', 'anim-type-4', 'anim-type-5'
+        ];
+
+        async function startExperience() {
+            const audio = document.getElementById('poem-audio');
+            
+            // ضبط وقت البدء وتشغيل الصوت
+            try {
+                audio.currentTime = 40; // ابدأ من الثانية 40
+                audio.volume = 1.0;
+                await audio.play();
+            } catch (e) {
+                console.log("Audio requires interaction:", e);
+            }
+
+            // إخفاء البداية وإظهار الشاشة
+            const startScreen = document.getElementById('start-screen');
+            startScreen.style.transition = 'opacity 1s';
+            startScreen.style.opacity = '0';
+            setTimeout(() => {
+                startScreen.classList.add('hidden');
+                document.getElementById('poem-screen').classList.remove('hidden');
+                document.getElementById('poem-screen').classList.add('flex');
+            }, 1000);
+
+            const verseDisplay = document.getElementById('verse-display');
+            
+            // حلقة القصيدة
+            for (let i = 0; i < poem.length; i++) {
+                // إعادة تعيين الكلاسات
+                verseDisplay.className = 'verse-text p-4';
+                
+                // النص
+                verseDisplay.innerText = poem[i];
+                
+                // اختيار حركة عشوائية
+                let randomAnim = animationClasses[Math.floor(Math.random() * animationClasses.length)];
+                
+                // تفعيل الحركة
+                void verseDisplay.offsetWidth; // Reflow
+                verseDisplay.classList.add(randomAnim);
+                
+                // تأثيرات إضافية مع كل بيت
+                createBurst(width/2, height/2); // انفجار صغير من الجزيئات في المنتصف
+                if (i % 2 === 0) createHeart(); // قلب كل بيتين
+
+                // الانتظار
+                await new Promise(r => setTimeout(r, 4000)); 
+
+                // خروج (إلا الأخير)
+                if (i < poem.length - 1) {
+                    verseDisplay.classList.remove(randomAnim);
+                    verseDisplay.classList.add('verse-exit');
+                    await new Promise(r => setTimeout(r, 800)); 
+                }
+            }
+
+            // إنهاء الصوت
+            let fadeAudio = setInterval(() => {
+                if (audio.volume > 0.05) audio.volume -= 0.05;
+                else { clearInterval(fadeAudio); audio.pause(); }
+            }, 200);
+
+            // شاشة النهاية
+            document.getElementById('poem-screen').classList.add('hidden');
+            const endScreen = document.getElementById('end-screen');
+            endScreen.classList.remove('hidden');
+            endScreen.classList.add('flex');
+            createHeartExplosion();
+        }
+
+        // إنشاء قلوب عائمة
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '❤';
+            heart.style.left = Math.random() * 80 + 10 + '%';
+            heart.style.top = '90%';
+            // أحجام عشوائية
+            heart.style.fontSize = (Math.random() * 2 + 1) + 'rem'; 
+            document.getElementById('content-layer').appendChild(heart);
+            setTimeout(() => heart.remove(), 4000);
+        }
+
+        function createHeartExplosion() {
+            for(let i=0; i<30; i++) setTimeout(createHeart, i * 150);
+        }
+
+        // تأثير إضافي: انفجار جزيئات بسيط عند تغيير النص (Burst Effect)
+        function createBurst(x, y) {
+            // يمكن إضافتها لاحقاً لزيادة التعقيد، حالياً الغبار الذهبي يكفي
+        }
+
+    </script>
+</body>
+</html>
